@@ -1,5 +1,5 @@
 {
-    "name": "sofa/eloquence",
+    "name": "ingenious/eloquence",
     "description": "Flexible Searchable, Mappable, Metable, Validation and more extensions for Laravel Eloquent ORM.",
     "license": "MIT",
     "support": {
@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Sofa\\Eloquence\\": "src"
+            "ingenious\\Eloquence\\": "src"
         },
         "files": [
             "src/helpers.php"
@@ -42,7 +42,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Sofa\\Eloquence\\Tests\\": "tests"
+            "ingenious\\Eloquence\\Tests\\": "tests"
         }
     },
     "minimum-stability": "stable"
