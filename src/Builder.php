@@ -107,7 +107,7 @@ class Builder extends HookableBuilder
 
         $subquery->select($this->model->getTable() . '.*')
                  ->from($this->model->getTable())
-                 ->groupBy($this->model->getQualifiedKeyName());
+                 ->groupBy( $this->model->getColumns() );
 
         $this->addSearchClauses($subquery, $columns, $words, $threshold);
 
