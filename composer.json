@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ingenious\\Eloquence\\": "src"
+            "Sofa\\Eloquence\\": "src"
         },
         "files": [
             "src/helpers.php"
@@ -42,7 +42,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ingenious\\Eloquence\\Tests\\": "tests"
+            "Sofa\\Eloquence\\Tests\\": "tests"
         }
     },
     "minimum-stability": "stable"
