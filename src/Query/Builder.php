@@ -1,8 +1,8 @@
 <?php
 
-namespace Sofa\Eloquence\Query;
+namespace Ingenious\Eloquence\Query;
 
-use Sofa\Eloquence\Subquery;
+use Ingenious\Eloquence\Subquery;
 
 class Builder extends \Illuminate\Database\Query\Builder
 {

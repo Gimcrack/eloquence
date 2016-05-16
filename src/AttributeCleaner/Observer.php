@@ -1,8 +1,8 @@
 <?php
 
-namespace Sofa\Eloquence\AttributeCleaner;
+namespace Ingenious\Eloquence\AttributeCleaner;
 
-use Sofa\Eloquence\Contracts\CleansAttributes;
+use Ingenious\Eloquence\Contracts\CleansAttributes;
 
 class Observer
 {
@@ -22,7 +22,7 @@ class Observer
     /**
      * Get rid of attributes that are not correct columns on this model's table.
      *
-     * @param  \Sofa\Eloquence\Contracts\CleansAttributes $model
+     * @param  \Ingenious\Eloquence\Contracts\CleansAttributes $model
      * @return void
      */
     protected function cleanAttributes(CleansAttributes $model)

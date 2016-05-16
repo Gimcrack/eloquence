@@ -1,9 +1,9 @@
 <?php
 
-namespace Sofa\Eloquence;
+namespace Ingenious\Eloquence;
 
 use LogicException;
-use Sofa\Eloquence\Mappable\Hooks;
+use Ingenious\Eloquence\Mappable\Hooks;
 use Sofa\Hookable\Contracts\ArgumentBag;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -58,7 +58,7 @@ trait Mappable
     /**
      * Custom query handler for querying mapped attributes.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $method
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @return mixed
@@ -79,7 +79,7 @@ trait Mappable
     /**
      * Adjust mapped columns for select statement.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @return void
      */
@@ -120,7 +120,7 @@ trait Mappable
     /**
      * Handle querying relational mappings.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $method
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @param  string $mapping
@@ -140,7 +140,7 @@ trait Mappable
     /**
      * Join mapped table(s) in order to call given method.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $method
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @param  string $target
@@ -163,12 +163,12 @@ trait Mappable
     /**
      * Order query by mapped attribute.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @param  string $table
      * @param  string $column
      * @param  string $target
-     * @return \Sofa\Eloquence\Builder
+     * @return \Ingenious\Eloquence\Builder
      */
     protected function orderByMapped(Builder $query, ArgumentBag $args, $table, $column, $target)
     {
@@ -180,7 +180,7 @@ trait Mappable
     /**
      * Get an array with the values of given mapped attribute.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @param  string $table
      * @param  string $column
@@ -202,9 +202,9 @@ trait Mappable
     /**
      * Add select clause for key of the list array.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $key
-     * @return \Sofa\Eloquence\Builder
+     * @return \Ingenious\Eloquence\Builder
      */
     protected function mappedSelectListsKey(Builder $query, $key)
     {
@@ -218,7 +218,7 @@ trait Mappable
     /**
      * Join mapped table(s).
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $target
      * @return string
      */
@@ -238,7 +238,7 @@ trait Mappable
     /**
      * Join relation's table accordingly.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $segment
      * @param  \Illuminate\Database\Eloquent\Model $parent
      * @return array
@@ -274,7 +274,7 @@ trait Mappable
     /**
      * Determine whether given table has been already joined.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string  $table
      * @return boolean
      */
@@ -313,7 +313,7 @@ trait Mappable
     /**
      * Get single value result from the mapped attribute.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $method
      * @param  string $qualifiedColumn
      * @return mixed
@@ -326,12 +326,12 @@ trait Mappable
     /**
      * Add whereHas subquery on the mapped attribute relation.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $method
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @param  string $target
      * @param  string $column
-     * @return \Sofa\Eloquence\Builder
+     * @return \Ingenious\Eloquence\Builder
      */
     protected function mappedHasQuery(Builder $query, $method, ArgumentBag $args, $target, $column)
     {
@@ -363,7 +363,7 @@ trait Mappable
     /**
      * Get boolean called on the original method and set it to default.
      *
-     * @param  \Sofa\EloquenceArgumentBag $args
+     * @param  \Ingenious\EloquenceArgumentBag $args
      * @return string
      */
     protected function getMappedBoolean(ArgumentBag $args)

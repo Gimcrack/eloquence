@@ -1,8 +1,8 @@
 <?php
 
-namespace Sofa\Eloquence\Searchable;
+namespace Ingenious\Eloquence\Searchable;
 
-use Sofa\Eloquence\Contracts\Searchable\Parser as ParserContract;
+use Ingenious\Eloquence\Contracts\Searchable\Parser as ParserContract;
 
 class Parser implements ParserContract
 {

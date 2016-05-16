@@ -1,10 +1,10 @@
 <?php
 
-namespace Sofa\Eloquence\Relations;
+namespace Ingenious\Eloquence\Relations;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
-use Sofa\Eloquence\Contracts\Relations\JoinerFactory as FactoryContract;
+use Ingenious\Eloquence\Contracts\Relations\JoinerFactory as FactoryContract;
 
 class JoinerFactory implements FactoryContract
 {
@@ -13,7 +13,7 @@ class JoinerFactory implements FactoryContract
      *
      * @param  \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder $query
      * @param  \Illuminate\Database\Eloquent\Model $model
-     * @return \Sofa\Eloquence\Relations\Joiner
+     * @return \Ingenious\Eloquence\Relations\Joiner
      */
     public static function make($query, Model $model = null)
     {

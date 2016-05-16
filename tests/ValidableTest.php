@@ -1,11 +1,11 @@
-<?php namespace Sofa\Eloquence\Tests;
+<?php namespace Ingenious\Eloquence\Tests;
 
 use Mockery as m;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\MessageBag;
-use Sofa\Eloquence\Eloquence;
-use Sofa\Eloquence\Validable;
-use Sofa\Eloquence\Validable\Observer;
+use Ingenious\Eloquence\Eloquence;
+use Ingenious\Eloquence\Validable;
+use Ingenious\Eloquence\Validable\Observer;
 
 class ValidableTest extends \PHPUnit_Framework_TestCase {
 

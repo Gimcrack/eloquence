@@ -1,9 +1,9 @@
 <?php
 
-namespace Sofa\Eloquence;
+namespace Ingenious\Eloquence;
 
-use Sofa\Eloquence\Mutable\Hooks;
-use Sofa\Eloquence\Mutator\Mutator;
+use Ingenious\Eloquence\Mutable\Hooks;
+use Ingenious\Eloquence\Mutator\Mutator;
 
 /**
  * @property array $setterMutators

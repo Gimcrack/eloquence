@@ -1,16 +1,16 @@
 <?php
 
-namespace Sofa\Eloquence\Tests;
+namespace Ingenious\Eloquence\Tests;
 
 use Mockery as m;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder as Query;
 use Illuminate\Database\Query\Grammars\Grammar;
 use Illuminate\Database\Query\Expression;
-use Sofa\Eloquence\Builder;
-use Sofa\Eloquence\Eloquence;
-use Sofa\Eloquence\Metable;
-use Sofa\Eloquence\ArgumentBag;
+use Ingenious\Eloquence\Builder;
+use Ingenious\Eloquence\Eloquence;
+use Ingenious\Eloquence\Metable;
+use Ingenious\Eloquence\ArgumentBag;
 
 class MetableTest extends \PHPUnit_Framework_TestCase {
 
@@ -474,7 +474,7 @@ class MetableTest extends \PHPUnit_Framework_TestCase {
         $relation = m::mock('StdClass');
         $relation->shouldReceive('save')->with($color);
 
-        $model = m::mock('\Sofa\Eloquence\Tests\MetableEloquentStub')->makePartial();
+        $model = m::mock('\Ingenious\Eloquence\Tests\MetableEloquentStub')->makePartial();
         $model->shouldReceive('getMetaAttributes')->andReturn([$color, $size]);
         $model->shouldReceive('metaAttributes')->andReturn($relation);
         $model->exists = true;
@@ -585,12 +585,12 @@ class MetableTest extends \PHPUnit_Framework_TestCase {
 
     public function getMetableStub()
     {
-        return m::mock('\Sofa\Eloquence\Tests\MetableStub')->makePartial();
+        return m::mock('\Ingenious\Eloquence\Tests\MetableStub')->makePartial();
     }
 
     public function getBag()
     {
-        return m::mock('\Sofa\Eloquence\Metable\AttributeBag');
+        return m::mock('\Ingenious\Eloquence\Metable\AttributeBag');
     }
 
     public function getModel()

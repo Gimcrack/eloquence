@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @package Sofa\Eloquence
+ * @package Ingenious\Eloquence
  * @author Jarek Tkaczyk <jare@softonsofa.com>
  */
 

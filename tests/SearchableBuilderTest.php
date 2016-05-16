@@ -1,17 +1,17 @@
 <?php
 
-namespace Sofa\Eloquence\Tests;
+namespace Ingenious\Eloquence\Tests;
 
 use Illuminate\Database\Query\Builder as Query;
 use Illuminate\Database\Query\Grammars\Grammar;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Eloquent\Model;
 
-use Sofa\Eloquence\Searchable\ParserFactory;
-use Sofa\Eloquence\Relations\JoinerFactory;
-use Sofa\Eloquence\ArgumentBag;
-use Sofa\Eloquence\Eloquence;
-use Sofa\Eloquence\Builder;
+use Ingenious\Eloquence\Searchable\ParserFactory;
+use Ingenious\Eloquence\Relations\JoinerFactory;
+use Ingenious\Eloquence\ArgumentBag;
+use Ingenious\Eloquence\Eloquence;
+use Ingenious\Eloquence\Builder;
 
 use Mockery as m;
 
@@ -364,12 +364,12 @@ class SearchableBuilderUserStub extends Model {
 
     public function profile()
     {
-        return $this->belongsTo('Sofa\Eloquence\Tests\SearchableProfileStub', 'profile_id');
+        return $this->belongsTo('Ingenious\Eloquence\Tests\SearchableProfileStub', 'profile_id');
     }
 
     public function companies()
     {
-        return $this->belongsToMany('Sofa\Eloquence\Tests\SearchableCompanyStub', 'company_user', 'user_id', 'company_id');
+        return $this->belongsToMany('Ingenious\Eloquence\Tests\SearchableCompanyStub', 'company_user', 'user_id', 'company_id');
     }
 }
 

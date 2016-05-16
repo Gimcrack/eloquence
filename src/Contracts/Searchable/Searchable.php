@@ -1,6 +1,6 @@
 <?php
 
-namespace Sofa\Eloquence\Searchable;
+namespace Ingenious\Eloquence\Searchable;
 
 interface Searchable
 {

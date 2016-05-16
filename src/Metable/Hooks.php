@@ -1,6 +1,6 @@
 <?php
 
-namespace Sofa\Eloquence\Metable;
+namespace Ingenious\Eloquence\Metable;
 
 use BadMethodCallException;
 

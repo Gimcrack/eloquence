@@ -1,8 +1,8 @@
 <?php
 
-namespace Sofa\Eloquence\Searchable;
+namespace Ingenious\Eloquence\Searchable;
 
-use Sofa\Eloquence\Contracts\Searchable\ParserFactory as FactoryContract;
+use Ingenious\Eloquence\Contracts\Searchable\ParserFactory as FactoryContract;
 
 class ParserFactory implements FactoryContract
 {
@@ -11,7 +11,7 @@ class ParserFactory implements FactoryContract
      *
      * @param  integer $weight
      * @param  string  $wildcard
-     * @return \Sofa\Eloquence\Contracts\Searchable\Parser
+     * @return \Ingenious\Eloquence\Contracts\Searchable\Parser
      */
     public static function make($weight = 1, $wildcard = '*')
     {

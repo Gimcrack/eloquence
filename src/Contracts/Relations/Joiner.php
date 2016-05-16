@@ -1,6 +1,6 @@
 <?php
 
-namespace Sofa\Eloquence\Contracts\Relations;
+namespace Ingenious\Eloquence\Contracts\Relations;
 
 interface Joiner
 {

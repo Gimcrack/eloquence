@@ -1,15 +1,15 @@
 <?php
 
-namespace Sofa\Eloquence;
+namespace Ingenious\Eloquence;
 
-use Sofa\Eloquence\Searchable\Column;
+use Ingenious\Eloquence\Searchable\Column;
 use Illuminate\Database\Query\Expression;
 use Sofa\Hookable\Builder as HookableBuilder;
-use Sofa\Eloquence\Searchable\ColumnCollection;
-use Sofa\Eloquence\Contracts\Relations\JoinerFactory;
-use Sofa\Eloquence\Contracts\Searchable\ParserFactory;
+use Ingenious\Eloquence\Searchable\ColumnCollection;
+use Ingenious\Eloquence\Contracts\Relations\JoinerFactory;
+use Ingenious\Eloquence\Contracts\Searchable\ParserFactory;
 use Illuminate\Database\Query\Grammars\PostgresGrammar;
-use Sofa\Eloquence\Searchable\Subquery as SearchableSubquery;
+use Ingenious\Eloquence\Searchable\Subquery as SearchableSubquery;
 
 /**
  * @method $this leftJoin($table, $one, $operator, $two)
@@ -19,21 +19,21 @@ class Builder extends HookableBuilder
     /**
      * Parser factory instance.
      *
-     * @var \Sofa\Eloquence\Contracts\Searchable\ParserFactory
+     * @var \Ingenious\Eloquence\Contracts\Searchable\ParserFactory
      */
     protected static $parser;
 
     /**
      * Joiner factory instance.
      *
-     * @var \Sofa\Eloquence\Contracts\Relations\JoinerFactory
+     * @var \Ingenious\Eloquence\Contracts\Relations\JoinerFactory
      */
     protected static $joinerFactory;
 
     /**
      * Relations joiner instance.
      *
-     * @var \Sofa\Eloquence\Contracts\Relations\Joiner
+     * @var \Ingenious\Eloquence\Contracts\Relations\Joiner
      */
     protected $joiner;
 
@@ -93,7 +93,7 @@ class Builder extends HookableBuilder
      * @param  array $words
      * @param  array $mappings
      * @param  float $threshold
-     * @return \Sofa\Eloquence\Searchable\Subquery
+     * @return \Ingenious\Eloquence\Searchable\Subquery
      */
     protected function buildSubquery(array $words, array $mappings, $threshold)
     {
@@ -117,8 +117,8 @@ class Builder extends HookableBuilder
     /**
      * Add select and where clauses on the subquery.
      *
-     * @param  \Sofa\Eloquence\Searchable\Subquery $subquery
-     * @param  \Sofa\Eloquence\Searchable\ColumnCollection $columns
+     * @param  \Ingenious\Eloquence\Searchable\Subquery $subquery
+     * @param  \Ingenious\Eloquence\Searchable\ColumnCollection $columns
      * @param  array $words
      * @param  float $threshold
      * @return void
@@ -154,8 +154,8 @@ class Builder extends HookableBuilder
     /**
      * Apply relevance select on the subquery.
      *
-     * @param  \Sofa\Eloquence\Searchable\Subquery $subquery
-     * @param  \Sofa\Eloquence\Searchable\ColumnCollection $columns
+     * @param  \Ingenious\Eloquence\Searchable\Subquery $subquery
+     * @param  \Ingenious\Eloquence\Searchable\ColumnCollection $columns
      * @param  array $words
      * @return array
      */
@@ -181,8 +181,8 @@ class Builder extends HookableBuilder
     /**
      * Apply where clauses on the subquery.
      *
-     * @param  \Sofa\Eloquence\Searchable\Subquery $subquery
-     * @param  \Sofa\Eloquence\Searchable\ColumnCollection $columns
+     * @param  \Ingenious\Eloquence\Searchable\Subquery $subquery
+     * @param  \Ingenious\Eloquence\Searchable\ColumnCollection $columns
      * @param  array $words
      * @return void
      */
@@ -213,7 +213,7 @@ class Builder extends HookableBuilder
     /**
      * Move where clauses to subquery to improve performance.
      *
-     * @param  \Sofa\Eloquence\Searchable\Subquery $subquery
+     * @param  \Ingenious\Eloquence\Searchable\Subquery $subquery
      * @return void
      */
     protected function wheresToSubquery(SearchableSubquery $subquery)
@@ -309,7 +309,7 @@ class Builder extends HookableBuilder
     /**
      * Build case clause from all words for a single column.
      *
-     * @param  \Sofa\Eloquence\Searchable\Column $column
+     * @param  \Ingenious\Eloquence\Searchable\Column $column
      * @param  array  $words
      * @return array
      */
@@ -377,7 +377,7 @@ class Builder extends HookableBuilder
     /**
      * Build basic search case for 'equals' comparison.
      *
-     * @param  \Sofa\Eloquence\Searchable\Column $column
+     * @param  \Ingenious\Eloquence\Searchable\Column $column
      * @param  array  $words
      * @return string
      */
@@ -432,8 +432,8 @@ class Builder extends HookableBuilder
      * Join related tables on the search subquery.
      *
      * @param  array $mappings
-     * @param  \Sofa\Eloquence\Searchable\Subquery $subquery
-     * @return \Sofa\Eloquence\Searchable\ColumnCollection
+     * @param  \Ingenious\Eloquence\Searchable\Subquery $subquery
+     * @return \Ingenious\Eloquence\Searchable\ColumnCollection
      */
     protected function joinForSearch($mappings, $subquery)
     {
@@ -543,7 +543,7 @@ class Builder extends HookableBuilder
     /**
      * Set search query parser factory instance.
      *
-     * @param \Sofa\Eloquence\Contracts\Searchable\ParserFactory $factory
+     * @param \Ingenious\Eloquence\Contracts\Searchable\ParserFactory $factory
      */
     public static function setParserFactory(ParserFactory $factory)
     {
@@ -553,7 +553,7 @@ class Builder extends HookableBuilder
     /**
      * Set the relations joiner factory instance.
      *
-     * @param \Sofa\Eloquence\Contracts\Relations\JoinerFactory $factory
+     * @param \Ingenious\Eloquence\Contracts\Relations\JoinerFactory $factory
      */
     public static function setJoinerFactory(JoinerFactory $factory)
     {

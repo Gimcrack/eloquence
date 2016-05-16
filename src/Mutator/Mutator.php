@@ -1,12 +1,12 @@
 <?php
 
-namespace Sofa\Eloquence\Mutator;
+namespace Ingenious\Eloquence\Mutator;
 
 use ReflectionException;
 use ReflectionClass;
 use ReflectionMethod;
 use Illuminate\Support\Traits\Macroable;
-use Sofa\Eloquence\Contracts\Mutator as MutatorContract;
+use Ingenious\Eloquence\Contracts\Mutator as MutatorContract;
 
 class Mutator implements MutatorContract
 {
@@ -42,7 +42,7 @@ class Mutator implements MutatorContract
      * @param  string $callable
      * @return array
      *
-     * @throws \Sofa\Eloquence\Mutator\InvalidCallableException
+     * @throws \Ingenious\Eloquence\Mutator\InvalidCallableException
      */
     protected function parse($callable)
     {
@@ -108,7 +108,7 @@ class Mutator implements MutatorContract
      * @param  string   $userCallable
      * @return callable
      *
-     * @throws \Sofa\Eloquence\Mutator\InvalidCallableException
+     * @throws \Ingenious\Eloquence\Mutator\InvalidCallableException
      */
     protected function parseClassMethod($userCallable)
     {
@@ -133,7 +133,7 @@ class Mutator implements MutatorContract
      * @param  \ReflectionMethod  $method
      * @return callable
      *
-     * @throws \Sofa\Eloquence\Mutator\InvalidCallableException
+     * @throws \Ingenious\Eloquence\Mutator\InvalidCallableException
      */
     protected function getInstanceMethod(ReflectionClass $class, ReflectionMethod $method)
     {

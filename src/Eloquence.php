@@ -1,13 +1,13 @@
 <?php
 
-namespace Sofa\Eloquence;
+namespace Ingenious\Eloquence;
 
 use Sofa\Hookable\Hookable;
-use Sofa\Eloquence\Mutator\Mutator;
+use Ingenious\Eloquence\Mutator\Mutator;
 use Sofa\Hookable\Contracts\ArgumentBag;
-use Sofa\Eloquence\Query\Builder as QueryBuilder;
-use Sofa\Eloquence\Contracts\Mutator as MutatorContract;
-use Sofa\Eloquence\AttributeCleaner\Observer as AttributeCleaner;
+use Ingenious\Eloquence\Query\Builder as QueryBuilder;
+use Ingenious\Eloquence\Contracts\Mutator as MutatorContract;
+use Ingenious\Eloquence\AttributeCleaner\Observer as AttributeCleaner;
 
 /**
  * This trait is an entry point for all the hooks that we want to apply
@@ -28,7 +28,7 @@ trait Eloquence
     /**
      * Attribute mutator instance.
      *
-     * @var \Sofa\Eloquence\Contracts\Mutator
+     * @var \Ingenious\Eloquence\Contracts\Mutator
      */
     protected static $attributeMutator;
 
@@ -171,8 +171,8 @@ trait Eloquence
     /**
      * Create new Eloquence query builder for the instance.
      *
-     * @param  \Sofa\Eloquence\Query\Builder
-     * @return \Sofa\Eloquence\Builder
+     * @param  \Ingenious\Eloquence\Query\Builder
+     * @return \Ingenious\Eloquence\Builder
      */
     public function newEloquentBuilder($query)
     {
@@ -182,7 +182,7 @@ trait Eloquence
     /**
      * Get a new query builder instance for the connection.
      *
-     * @return \Sofa\Eloquence\Query\Builder
+     * @return \Ingenious\Eloquence\Query\Builder
      */
     protected function newBaseQueryBuilder()
     {
@@ -198,7 +198,7 @@ trait Eloquence
      *
      * @codeCoverageIgnore
      *
-     * @param  \Sofa\Eloquence\Contracts\Mutator $mutator
+     * @param  \Ingenious\Eloquence\Contracts\Mutator $mutator
      * @return void
      */
     public static function setAttributeMutator(MutatorContract $mutator)
@@ -211,7 +211,7 @@ trait Eloquence
      *
      * @codeCoverageIgnore
      *
-     * @return \Sofa\Eloquence\Contracts\Mutator
+     * @return \Ingenious\Eloquence\Contracts\Mutator
      */
     public static function getAttributeMutator()
     {

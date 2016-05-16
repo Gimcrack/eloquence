@@ -1,6 +1,6 @@
 <?php
 
-namespace Sofa\Eloquence\Contracts\Searchable;
+namespace Ingenious\Eloquence\Contracts\Searchable;
 
 use Illuminate\Database\Eloquent\Builder;
 
@@ -11,7 +11,7 @@ interface ParserFactory
      *
      * @param  integer $weight
      * @param  string  $wildcard
-     * @return \Sofa\Eloquence\Contracts\Searchable\Parser
+     * @return \Ingenious\Eloquence\Contracts\Searchable\Parser
      */
     public static function make($weight = 1, $wildcard = '*');
 }

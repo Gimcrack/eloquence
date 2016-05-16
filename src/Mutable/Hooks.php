@@ -1,6 +1,6 @@
 <?php
 
-namespace Sofa\Eloquence\Mutable;
+namespace Ingenious\Eloquence\Mutable;
 
 /**
  * This class provides instance scope for the closures

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sofa\Eloquence\Metable;
+namespace Ingenious\Eloquence\Metable;
 
 class InvalidTypeException extends \InvalidArgumentException
 {

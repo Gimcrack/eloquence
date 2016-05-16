@@ -1,6 +1,6 @@
 <?php
 
-namespace Sofa\Eloquence\Mappable;
+namespace Ingenious\Eloquence\Mappable;
 
 use BadMethodCallException;
 

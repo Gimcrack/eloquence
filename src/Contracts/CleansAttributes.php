@@ -1,6 +1,6 @@
 <?php
 
-namespace Sofa\Eloquence\Contracts;
+namespace Ingenious\Eloquence\Contracts;
 
 interface CleansAttributes
 {

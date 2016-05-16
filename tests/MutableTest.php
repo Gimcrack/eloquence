@@ -1,11 +1,11 @@
 <?php
 
-namespace Sofa\Eloquence\Tests;
+namespace Ingenious\Eloquence\Tests;
 
 use Mockery as m;
 use Illuminate\Database\Eloquent\Model;
-use Sofa\Eloquence\Eloquence;
-use Sofa\Eloquence\Mutable;
+use Ingenious\Eloquence\Eloquence;
+use Ingenious\Eloquence\Mutable;
 
 class MutableTest extends \PHPUnit_Framework_TestCase
 {
@@ -45,7 +45,7 @@ class MutableTest extends \PHPUnit_Framework_TestCase
 
     protected function getModel()
     {
-        $mutator = m::mock('\Sofa\Eloquence\Contracts\Mutator');
+        $mutator = m::mock('\Ingenious\Eloquence\Contracts\Mutator');
 
         $model = new MutableEloquentStub;
         $model->setRawAttributes(['first_name' => 'jarek', 'last_name' => 'tkaczyk', 'email' => 'JAREK@SOFTONSOFA.COM']);

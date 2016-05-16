@@ -1,10 +1,10 @@
 <?php
 
-namespace Sofa\Eloquence;
+namespace Ingenious\Eloquence;
 
-use Sofa\Eloquence\Contracts\CleansAttributes;
+use Ingenious\Eloquence\Contracts\CleansAttributes;
 use Illuminate\Database\Eloquent\Model as Eloquent;
-use Sofa\Eloquence\Contracts\Validable as ValidableContract;
+use Ingenious\Eloquence\Contracts\Validable as ValidableContract;
 
 class Model extends Eloquent implements CleansAttributes, ValidableContract
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Sofa\Eloquence;
+namespace Ingenious\Eloquence;
 
-use Sofa\Eloquence\Builder;
-use Sofa\Eloquence\Mutator\Mutator;
-use Sofa\Eloquence\Relations\JoinerFactory;
-use Sofa\Eloquence\Searchable\ParserFactory;
+use Ingenious\Eloquence\Builder;
+use Ingenious\Eloquence\Mutator\Mutator;
+use Ingenious\Eloquence\Relations\JoinerFactory;
+use Ingenious\Eloquence\Searchable\ParserFactory;
 use Illuminate\Support\ServiceProvider as BaseProvider;
 
 /**
@@ -43,7 +43,7 @@ class ServiceProvider extends BaseProvider
             return new Mutator;
         });
 
-        $this->app->alias('eloquence.mutator', 'Sofa\Eloquence\Contracts\Mutator');
+        $this->app->alias('eloquence.mutator', 'Ingenious\Eloquence\Contracts\Mutator');
     }
 
     /**
@@ -57,7 +57,7 @@ class ServiceProvider extends BaseProvider
             return new JoinerFactory;
         });
 
-        $this->app->alias('eloquence.joiner', 'Sofa\Eloquence\Contracts\Relations\JoinerFactory');
+        $this->app->alias('eloquence.joiner', 'Ingenious\Eloquence\Contracts\Relations\JoinerFactory');
     }
 
     /**
@@ -71,7 +71,7 @@ class ServiceProvider extends BaseProvider
             return new ParserFactory;
         });
 
-        $this->app->alias('eloquence.parser', 'Sofa\Eloquence\Contracts\Relations\ParserFactory');
+        $this->app->alias('eloquence.parser', 'Ingenious\Eloquence\Contracts\Relations\ParserFactory');
     }
 
     /**

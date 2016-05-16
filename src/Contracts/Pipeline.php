@@ -1,6 +1,6 @@
 <?php
 
-namespace Sofa\Eloquence\Contracts;
+namespace Ingenious\Eloquence\Contracts;
 
 use Closure;
 
@@ -25,7 +25,7 @@ interface Pipeline
     /**
      * Add the arguments to be passed along with the parcel.
      *
-     * @param  \Sofa\Eloquence\Contracts\ArgumentBag $args
+     * @param  \Ingenious\Eloquence\Contracts\ArgumentBag $args
      * @return $this
      */
     public function with(ArgumentBag $args);

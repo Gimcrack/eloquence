@@ -1,10 +1,10 @@
 <?php
 
-namespace Sofa\Eloquence;
+namespace Ingenious\Eloquence;
 
-use Sofa\Eloquence\Metable\Hooks;
-use Sofa\Eloquence\Metable\Attribute;
-use Sofa\Eloquence\Metable\AttributeBag;
+use Ingenious\Eloquence\Metable\Hooks;
+use Ingenious\Eloquence\Metable\Attribute;
+use Ingenious\Eloquence\Metable\AttributeBag;
 use Sofa\Hookable\Contracts\ArgumentBag;
 
 /**
@@ -62,7 +62,7 @@ trait Metable
     /**
      * Custom query handler for querying meta attributes.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $method
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @return mixed
@@ -79,7 +79,7 @@ trait Metable
     /**
      * Adjust meta columns for select statement.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @return void
      */
@@ -111,7 +111,7 @@ trait Metable
     /**
      * Join meta attributes table in order to call provided method.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $method
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @return mixed
@@ -132,10 +132,10 @@ trait Metable
     /**
      * Order query by meta attribute.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @param  string $alias
-     * @return \Sofa\Eloquence\Builder
+     * @return \Ingenious\Eloquence\Builder
      */
     protected function orderByMeta(Builder $query, $args, $alias)
     {
@@ -147,7 +147,7 @@ trait Metable
     /**
      * Get an array with the values of given meta attribute.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
      * @param  string $alias
      * @return array
@@ -168,9 +168,9 @@ trait Metable
     /**
      * Add select clause for key of the list array.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $key
-     * @return \Sofa\Eloquence\Builder
+     * @return \Ingenious\Eloquence\Builder
      */
     protected function metaSelectListsKey(Builder $query, $key)
     {
@@ -188,7 +188,7 @@ trait Metable
     /**
      * Get single value result from the meta attribute.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $method
      * @param  string $alias
      * @return mixed
@@ -202,7 +202,7 @@ trait Metable
     /**
      * Join meta attributes table.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $column
      * @return string
      */
@@ -236,10 +236,10 @@ trait Metable
     /**
      * Add whereHas subquery on the meta attributes relation.
      *
-     * @param  \Sofa\Eloquence\Builder $query
+     * @param  \Ingenious\Eloquence\Builder $query
      * @param  string $method
      * @param  \Sofa\Hookable\Contracts\ArgumentBag $args
-     * @return \Sofa\Eloquence\Builder
+     * @return \Ingenious\Eloquence\Builder
      */
     protected function metaHasQuery(Builder $query, $method, ArgumentBag $args)
     {
@@ -259,7 +259,7 @@ trait Metable
     /**
      * Get boolean called on the original method and set it to default.
      *
-     * @param  \Sofa\EloquenceArgumentBag $args
+     * @param  \Ingenious\EloquenceArgumentBag $args
      * @return string
      */
     protected function getMetaBoolean(ArgumentBag $args)
@@ -426,13 +426,13 @@ trait Metable
      */
     public function metaAttributes()
     {
-        return $this->morphMany('Sofa\Eloquence\Metable\Attribute', 'metable');
+        return $this->morphMany('Ingenious\Eloquence\Metable\Attribute', 'metable');
     }
 
     /**
      * Get meta attributes as collection.
      *
-     * @return \Sofa\Eloquence\Metable\AttributeBag
+     * @return \Ingenious\Eloquence\Metable\AttributeBag
      */
     public function getMetaAttributes()
     {
@@ -444,7 +444,7 @@ trait Metable
     /**
      * Accessor for metaAttributes property
      *
-     * @return \Sofa\Eloquence\Metable\AttributeBag
+     * @return \Ingenious\Eloquence\Metable\AttributeBag
      */
     public function getMetaAttributesAttribute()
     {

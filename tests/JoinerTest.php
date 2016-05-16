@@ -1,11 +1,11 @@
 <?php
 
-namespace Sofa\Eloquence\Tests;
+namespace Ingenious\Eloquence\Tests;
 
 use Illuminate\Database\Query\Builder as Query;
 use Illuminate\Database\Query\Grammars\Grammar;
 use Illuminate\Database\Eloquent\Model;
-use Sofa\Eloquence\Relations\JoinerFactory;
+use Ingenious\Eloquence\Relations\JoinerFactory;
 
 use Mockery as m;
 
@@ -109,19 +109,19 @@ class JoinerUserStub extends Model {
 
     public function profile()
     {
-        return $this->belongsTo('Sofa\Eloquence\Tests\JoinerProfileStub', 'profile_id');
+        return $this->belongsTo('Ingenious\Eloquence\Tests\JoinerProfileStub', 'profile_id');
     }
 
     public function companies()
     {
-        return $this->belongsToMany('Sofa\Eloquence\Tests\JoinerCompanyStub', 'company_user', 'user_id', 'company_id');
+        return $this->belongsToMany('Ingenious\Eloquence\Tests\JoinerCompanyStub', 'company_user', 'user_id', 'company_id');
     }
 
     public function profiles()
     {
         // due to lack of getters on HasManyThrough this relation works only with default fk!
-        $related = 'Sofa\Eloquence\Tests\JoinerProfileStub';
-        $through = 'Sofa\Eloquence\Tests\JoinerCompanyStub';
+        $related = 'Ingenious\Eloquence\Tests\JoinerProfileStub';
+        $through = 'Ingenious\Eloquence\Tests\JoinerCompanyStub';
         return $this->hasManyThrough($related, $through, 'user_id', 'company_id');
     }
 
@@ -132,12 +132,12 @@ class JoinerUserStub extends Model {
 
     public function posts()
     {
-        return $this->hasMany('Sofa\Eloquence\Tests\JoinerPostStub', 'user_id');
+        return $this->hasMany('Ingenious\Eloquence\Tests\JoinerPostStub', 'user_id');
     }
 
     public function morphed()
     {
-        return $this->morphOne('Sofa\Eloquence\Tests\MorphOneStub');
+        return $this->morphOne('Ingenious\Eloquence\Tests\MorphOneStub');
     }
 
     public function morphs()
@@ -151,7 +151,7 @@ class JoinerProfileStub extends Model {
 
     public function company()
     {
-        return $this->morphOne('Sofa\Eloquence\Tests\JoinerCompanyStub', 'morphable');
+        return $this->morphOne('Ingenious\Eloquence\Tests\JoinerCompanyStub', 'morphable');
     }
 }
 

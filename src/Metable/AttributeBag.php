@@ -1,10 +1,10 @@
 <?php
 
-namespace Sofa\Eloquence\Metable;
+namespace Ingenious\Eloquence\Metable;
 
 use InvalidArgumentException;
 use Illuminate\Database\Eloquent\Collection;
-use Sofa\Eloquence\Contracts\AttributeBag as AttributeBagContract;
+use Ingenious\Eloquence\Contracts\AttributeBag as AttributeBagContract;
 
 class AttributeBag extends Collection implements AttributeBagContract
 {
@@ -23,7 +23,7 @@ class AttributeBag extends Collection implements AttributeBagContract
     /**
      * Add or update attribute.
      *
-     * @param  \Sofa\Eloquence\Metable\Attribute|string $key
+     * @param  \Ingenious\Eloquence\Metable\Attribute|string $key
      * @param  mixed $value
      * @return $this
      */
@@ -45,7 +45,7 @@ class AttributeBag extends Collection implements AttributeBagContract
     /**
      * Set attribute.
      *
-     * @param \Sofa\Eloquence\Metable\Attribute $attribute
+     * @param \Ingenious\Eloquence\Metable\Attribute $attribute
      */
     protected function setInstance(Attribute $attribute)
     {
@@ -61,7 +61,7 @@ class AttributeBag extends Collection implements AttributeBagContract
     /**
      * Set attribute.
      *
-     * @param \Sofa\Eloquence\Metable\Attribute $attribute
+     * @param \Ingenious\Eloquence\Metable\Attribute $attribute
      */
     public function add($attribute)
     {
@@ -71,7 +71,7 @@ class AttributeBag extends Collection implements AttributeBagContract
     /**
      * Set attribute.
      *
-     * @param \Sofa\Eloquence\Metable\Attribute $attribute
+     * @param \Ingenious\Eloquence\Metable\Attribute $attribute
      */
     protected function addInstance(Attribute $attribute)
     {
@@ -81,7 +81,7 @@ class AttributeBag extends Collection implements AttributeBagContract
     /**
      * Update existing attribute.
      *
-     * @param  \Sofa\Eloquence\Metable\Attribute|string $key
+     * @param  \Ingenious\Eloquence\Metable\Attribute|string $key
      * @param  mixed  $value
      * @return $this
      */
@@ -102,7 +102,7 @@ class AttributeBag extends Collection implements AttributeBagContract
      *
      * @param  string $key
      * @param  mixed  $value
-     * @return \Sofa\Eloquence\Metable\Attribute
+     * @return \Ingenious\Eloquence\Metable\Attribute
      */
     protected function newAttribute($key, $value)
     {
